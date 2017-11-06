@@ -1,0 +1,28 @@
+{
+  "name": "trackingdog",
+  "version": "1.0.0",
+  "description": "cli for finding the original source location of a line+column in a generated file, utilizing the source map",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "lint": "standard"
+  },
+  "bin": {
+    "trackingdog": "lib/cli.js"
+  },
+  "author": "Andreas Lind <andreaslindpetersen@gmail.com>",
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "assetgraph": "github:assetgraph/assetgraph#f83ea442064769990a715387dba8313997ed08c4",
+    "source-map": "0.6.1",
+    "yargs": "10.0.3"
+  },
+  "devDependencies": {
+    "eslint": "4.10.0",
+    "eslint-config-pretty-standard": "1.1.0",
+    "eslint-plugin-prettier": "2.3.1",
+    "jest": "21.2.1",
+    "prettier": "1.7.4",
+    "unexpected": "10.36.0"
+  }
+}
