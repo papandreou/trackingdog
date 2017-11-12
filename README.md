@@ -23,5 +23,4 @@ Future ideas
 - Recursively attempt to load the source file and see if it also has a source
   map reference (in case someone used a "dist" file in a bundle without using
   source-map-loader or equivalent)
-- View a snippet of the source file, highlighting the found location
 - Support a local "workspace" directory à la Chrome Dev Tools

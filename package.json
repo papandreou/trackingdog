@@ -14,6 +14,8 @@
   "license": "BSD-3-Clause",
   "dependencies": {
     "assetgraph": "github:assetgraph/assetgraph#f83ea442064769990a715387dba8313997ed08c4",
+    "magicpen": "5.12.0",
+    "magicpen-prism": "2.3.0",
     "source-map": "0.6.1",
     "yargs": "10.0.3"
   },
