@@ -32,7 +32,7 @@ https://code.jquery.com/jquery-1.10.1.js:109:16
 ```
 
 If the source asset is available as a local file, the output will be a
-CWD-relative path with :<line>:<column> appended:
+CWD-relative path with :\<line\>:\<column\> appended:
 
 ```
 $ trackingdog path/to/jquery-1.10.1.min.js:4:745
