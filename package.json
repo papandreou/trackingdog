@@ -30,5 +30,8 @@
     "jest": "^21.2.1",
     "prettier": "^1.7.4",
     "unexpected": "^10.36.0"
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>/testSetup.js"
   }
 }
