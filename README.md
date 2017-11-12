@@ -53,3 +53,5 @@ Future ideas
   map reference (in case someone used a "dist" file in a bundle without using
   source-map-loader or equivalent)
 - Support a local "workspace" directory à la Chrome Dev Tools
+- Support getting the original source from the `sourcesContent` property of
+  the source map
