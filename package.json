@@ -18,7 +18,6 @@
     "assetgraph": "github:assetgraph/assetgraph#7fab3ab13138febd4e78471cfe86967e953b5ca7",
     "magicpen": "^5.12.0",
     "magicpen-prism": "^2.3.0",
-    "source-map": "^0.6.1",
     "urltools": "^0.3.5",
     "yargs": "^10.0.3"
   },
