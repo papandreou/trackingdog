@@ -1,6 +1,6 @@
 {
   "name": "trackingdog",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "cli for finding the original source location of a line+column in a generated file, utilizing the source map",
   "main": "index.js",
   "scripts": {
