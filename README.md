@@ -44,6 +44,7 @@ supports that syntax for jumping directly to a specific line/column:
 
 ```sh
 atom `trackingdog path/to/jquery-1.10.1.min.js:4:745`
+code -g `trackingdog path/to/jquery-1.10.1.min.js:4:745`
 ```
 
 Future ideas
