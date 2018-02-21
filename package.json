@@ -16,6 +16,7 @@
   "license": "BSD-3-Clause",
   "dependencies": {
     "assetgraph": "github:assetgraph/assetgraph#154775c4130e9602cf0eb6a19a22a2661a2c1d84",
+    "error-stack-parser": "^2.0.1",
     "magicpen": "^5.12.0",
     "magicpen-prism": "^2.3.0",
     "urltools": "^0.3.5",
