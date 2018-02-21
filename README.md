@@ -1,5 +1,4 @@
-trackingdog
-===========
+## trackingdog
 
 Find the source location of a line/column in a generated file. Supports
 JavaScript and CSS, local files and http urls.
@@ -47,10 +46,32 @@ atom `trackingdog path/to/jquery-1.10.1.min.js:4:745`
 code -g `trackingdog path/to/jquery-1.10.1.min.js:4:745`
 ```
 
-Future ideas
-============
+# Programmatic usage
 
-- Recursively attempt to load the source file and see if it also has a source
+The main export of the package is a `TrackingDog` class that can be used
+to track one or more source locations via the `track` method. The assets
+loaded and parsed as part of this effort are cached in the instance, so
+it's cheaper to track more source locations in the same files.
+
+Example usage:
+
+```js
+const TrackingDog = require('trackingdog');
+
+const dog = new TrackingDog();
+
+const { url, line, column } = await dog.track({
+  url: 'https://code.jquery.com/jquery-1.10.1.min.js',
+  line: 4,
+  column: 19
+});
+
+console.log(`Yay, the location in the original source is ${url}:${line}:${column}`);
+```
+
+# Future ideas
+
+* Recursively attempt to load the source file and see if it also has a source
   map reference (in case someone used a "dist" file in a bundle without using
   source-map-loader or equivalent)
-- Support a local "workspace" directory à la Chrome Dev Tools
+* Support a local "workspace" directory à la Chrome Dev Tools
