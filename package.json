@@ -15,7 +15,7 @@
   "author": "Andreas Lind <andreaslindpetersen@gmail.com>",
   "license": "BSD-3-Clause",
   "dependencies": {
-    "assetgraph": "github:assetgraph/assetgraph#154775c4130e9602cf0eb6a19a22a2661a2c1d84",
+    "assetgraph": "^4.0.0",
     "magicpen": "^5.12.0",
     "magicpen-prism": "^2.3.0",
     "urltools": "^0.3.5",
