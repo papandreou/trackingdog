@@ -16,6 +16,14 @@ $ trackingdog http://charcod.es/static/bundle-44.0449b572b5.js:4:22208
 http://charcod.es/js/app.js:95:0
 ```
 
+You can map local folders in as workspaces (à la Chrome Dev Tools) and have
+the remote files mapped to paths local to your filesystem:
+
+```sh
+$ trackingdog --workspace http://charcod.es/js=./src http://charcod.es/static/bundle-44.0449b572b5.js:4:22208
+./src/app.js:95:0
+```
+
 If the referenced source file can be retrieved, you'll get a bit of context:
 
 ```js
@@ -74,4 +82,3 @@ console.log(`Yay, the location in the original source is ${url}:${line}:${column
 * Recursively attempt to load the source file and see if it also has a source
   map reference (in case someone used a "dist" file in a bundle without using
   source-map-loader or equivalent)
-* Support a local "workspace" directory à la Chrome Dev Tools
