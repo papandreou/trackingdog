@@ -16,6 +16,13 @@ $ trackingdog http://charcod.es/static/bundle-44.0449b572b5.js:4:22208
 http://charcod.es/js/app.js:95:0
 ```
 
+Note that it is also possible to pipe a full stack trace over stdin:
+
+```sh
+$ pbpaste | trackingdog # paste from clipboard (macos only)
+$ trackingdog < myStacktraceFile.txt # pipe in a file
+```
+
 You can map local folders in as workspaces (à la Chrome Dev Tools) and have
 the remote files mapped to paths local to your filesystem:
 
