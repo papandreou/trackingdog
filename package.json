@@ -20,7 +20,7 @@
     "get-stdin": "^6.0.0",
     "magicpen": "^5.12.0",
     "magicpen-prism": "^2.3.0",
-    "urltools": "^0.3.5",
+    "urltools": "^0.4.1",
     "yargs": "^10.0.3"
   },
   "devDependencies": {
