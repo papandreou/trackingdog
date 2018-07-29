@@ -28,13 +28,15 @@
     "eslint": "^5.0.0",
     "eslint-config-pretty-standard": "^2.0.0",
     "eslint-plugin-prettier": "^2.3.1",
+    "httpception": "^2.0.0",
     "jest": "^23.0.1",
     "prettier": "^1.7.4",
-    "unexpected": "^10.37.0"
+    "sinon": "^6.1.4",
+    "unexpected": "^10.37.0",
+    "unexpected-sinon": "^10.10.1"
   },
   "jest": {
     "setupTestFrameworkScriptFile": "<rootDir>/testSetup.js",
     "testURL": "http://localhost"
-
   }
 }
