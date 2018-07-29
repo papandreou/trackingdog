@@ -33,6 +33,8 @@
     "unexpected": "^10.37.0"
   },
   "jest": {
-    "setupTestFrameworkScriptFile": "<rootDir>/testSetup.js"
+    "setupTestFrameworkScriptFile": "<rootDir>/testSetup.js",
+    "testURL": "http://localhost"
+
   }
 }
