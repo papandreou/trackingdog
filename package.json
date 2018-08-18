@@ -38,6 +38,7 @@
   },
   "jest": {
     "setupTestFrameworkScriptFile": "<rootDir>/testSetup.js",
-    "testURL": "http://localhost"
+    "testURL": "http://localhost",
+    "testEnvironment": "node"
   }
 }
