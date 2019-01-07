@@ -33,7 +33,7 @@
     "jest": "^23.0.1",
     "prettier": "^1.7.4",
     "sinon": "^7.0.0",
-    "unexpected": "^10.37.0",
+    "unexpected": "^11.0.0",
     "unexpected-sinon": "^10.10.1"
   },
   "jest": {
