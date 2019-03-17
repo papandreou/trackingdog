@@ -24,7 +24,7 @@
     "error-stack-parser": "^2.0.1",
     "get-stdin": "^6.0.0",
     "magicpen": "^6.0.2",
-    "magicpen-prism": "^2.3.0",
+    "magicpen-prism": "^3.0.1",
     "urltools": "^0.4.1",
     "yargs": "^13.2.1"
   },
