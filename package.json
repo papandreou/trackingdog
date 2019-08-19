@@ -20,7 +20,7 @@
   "license": "BSD-3-Clause",
   "dependencies": {
     "@gustavnikolaj/async-main-wrap": "^3.0.0",
-    "assetgraph": "^5.1.0",
+    "assetgraph": "^6.0.0",
     "error-stack-parser": "^2.0.1",
     "get-stdin": "^7.0.0",
     "magicpen": "^6.0.2",
