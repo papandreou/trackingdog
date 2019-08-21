@@ -26,7 +26,7 @@
     "magicpen": "^6.0.2",
     "magicpen-prism": "^3.0.1",
     "urltools": "^0.4.1",
-    "yargs": "^13.2.1"
+    "yargs": "^14.0.0"
   },
   "devDependencies": {
     "coveralls": "^3.0.0",
