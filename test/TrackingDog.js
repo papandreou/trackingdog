@@ -1,3 +1,5 @@
+process.argv.push('--no-color'); // So that supports-color doesn't return true
+
 const expect = require('unexpected')
   .clone()
   .use(require('unexpected-sinon'));

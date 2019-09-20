@@ -1,7 +1,8 @@
+process.argv.push('--no-color'); // So that supports-color doesn't return true
+
 const pathModule = require('path');
 const sinon = require('sinon');
 const processError = require('../lib/processError');
-process.argv.push('--no-color'); // So that supports-color doesn't return true
 
 const expect = require('unexpected')
   .clone()
