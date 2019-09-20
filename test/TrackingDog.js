@@ -91,7 +91,23 @@ describe('trackingDog', function() {
       );
     });
 
-    describe('when the source map is not explicitly referenced', function() {
+    describe('when the source map does not contain mappings for the given :line:column', function() {
+      it('should error out', async function() {
+        const trackingDog = new TrackingDog();
+        await expect(
+          () =>
+            trackingDog.track({
+              url: 'https://code.jquery.com/jquery-1.10.1.min.js',
+              line: 400000,
+              column: 19
+            }),
+          'to be rejected with',
+          'A source map for https://code.jquery.com/jquery-1.10.1.min.js was found, but it did not contain mappings for :400000:19'
+        );
+      });
+    });
+
+    describe('when a source map is not explicitly referenced', function() {
       describe('but can by found by appending .map to the url', function() {
         it('should find and use the source map', async function() {
           httpception([
@@ -136,6 +152,38 @@ describe('trackingDog', function() {
               line: 1,
               column: 5
             }
+          );
+        });
+      });
+
+      describe('and cannot be found at other locations', function() {
+        it('should error out', async function() {
+          httpception([
+            {
+              request: 'GET https://example.com/styles.css',
+              response: {
+                headers: {
+                  'Content-Type': 'text/css'
+                },
+                body: 'body {\n  color: maroon;\n}\n'
+              }
+            },
+            {
+              request: 'GET https://example.com/styles.css.map',
+              response: 404
+            }
+          ]);
+
+          const trackingDog = new TrackingDog();
+          await expect(
+            () =>
+              trackingDog.track({
+                url: 'https://example.com/styles.css',
+                line: 2,
+                column: 5
+              }),
+            'to be rejected with',
+            'No source map referenced, also tried https://example.com/styles.css.map'
           );
         });
       });
