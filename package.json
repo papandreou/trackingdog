@@ -4,8 +4,8 @@
   "description": "cli for finding the original source location of a line+column in a generated file, utilizing the source map",
   "main": "lib/TrackingDog.js",
   "scripts": {
-    "test": "jest",
-    "coverage": "jest --coverage",
+    "test": "mocha",
+    "coverage": "NODE_ENV=development nyc --reporter=lcov --reporter=text --all -- npm test && echo google-chrome coverage/lcov-report/index.html",
     "lint": "eslint . && prettier --check '**/*.js'",
     "ci": "npm run test && npm run lint && npm run coverage"
   },
@@ -25,6 +25,7 @@
     "get-stdin": "^7.0.0",
     "magicpen": "^6.0.2",
     "magicpen-prism": "^3.0.1",
+    "nyc": "^14.1.1",
     "urltools": "^0.4.1",
     "yargs": "^14.0.0"
   },
@@ -39,15 +40,15 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.0",
     "httpception": "^3.0.0",
-    "jest": "^24.0.0",
+    "mocha": "^6.2.0",
     "prettier": "~1.18.2",
     "sinon": "^7.2.5",
     "unexpected": "^11.1.0",
     "unexpected-sinon": "^10.11.1"
   },
-  "jest": {
-    "setupTestFrameworkScriptFile": "<rootDir>/testSetup.js",
-    "testURL": "http://localhost",
-    "testEnvironment": "node"
+  "nyc": {
+    "include": [
+      "lib/**"
+    ]
   }
 }

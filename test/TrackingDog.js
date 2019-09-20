@@ -1,7 +1,7 @@
 const expect = require('unexpected')
   .clone()
   .use(require('unexpected-sinon'));
-const TrackingDog = require('./TrackingDog');
+const TrackingDog = require('../lib/TrackingDog');
 const httpception = require('httpception');
 const sinon = require('sinon');
 

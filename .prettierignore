@@ -4,3 +4,4 @@
 /node_modules/
 /testdata/
 /coverage/
+/.nyc_output/

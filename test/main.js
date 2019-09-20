@@ -1,13 +1,13 @@
 const pathModule = require('path');
 const sinon = require('sinon');
-const processError = require('./processError');
+const processError = require('../lib/processError');
 process.argv.push('--no-color'); // So that supports-color doesn't return true
 
 const expect = require('unexpected')
   .clone()
   .use(require('unexpected-sinon'));
 
-const main = require('./main');
+const main = require('../lib/main');
 
 describe('main', function() {
   let mockConsole;
