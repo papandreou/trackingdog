@@ -86,9 +86,86 @@ describe('main', function() {
             '\t\tif ( document.addEventListener ) {\n' +
             '                ^\n' +
             '\t\t\tdocument.removeEventListener( "DOMContentLoaded", completed, false );\n' +
-            '\t\t\twindow.removeEventListener( "load", completed, false );\n'
+            '\t\t\twindow.removeEventListener( "load", completed, false );\n' +
+            '\n' +
+            '\t\t} else {\n' +
+            '\t\t\tdocument.detachEvent( "onreadystatechange", completed );'
         ]
       );
+    });
+
+    describe('and -U', function() {
+      it('should render the specified number of context lines before and after', async function() {
+        await expect(
+          [
+            '--context',
+            '-U3',
+            'testdata/existingJavaScriptSourceMap/jquery-1.10.1.min.js',
+            '4',
+            '745'
+          ],
+          'to yield output',
+          [
+            'testdata/existingJavaScriptSourceMap/jquery-1.10.1.js:109:16',
+            '\t},\n' +
+              '\t// Clean-up method for dom ready events\n' +
+              '\tdetach = function() {\n' +
+              '\t\tif ( document.addEventListener ) {\n' +
+              '                ^\n' +
+              '\t\t\tdocument.removeEventListener( "DOMContentLoaded", completed, false );\n' +
+              '\t\t\twindow.removeEventListener( "load", completed, false );\n'
+          ]
+        );
+      });
+    });
+
+    describe('and -B and -A', function() {
+      it('should render the specified number of context lines before and after', async function() {
+        await expect(
+          [
+            '--context',
+            '-B1',
+            '-A2',
+            'testdata/existingJavaScriptSourceMap/jquery-1.10.1.min.js',
+            '4',
+            '745'
+          ],
+          'to yield output',
+          [
+            'testdata/existingJavaScriptSourceMap/jquery-1.10.1.js:109:16',
+            '\tdetach = function() {\n' +
+              '\t\tif ( document.addEventListener ) {\n' +
+              '                ^\n' +
+              '\t\t\tdocument.removeEventListener( "DOMContentLoaded", completed, false );\n' +
+              '\t\t\twindow.removeEventListener( "load", completed, false );'
+          ]
+        );
+      });
+
+      describe('and -U', function() {
+        it('should prefer the -A and -B values and ignore -U', async function() {
+          await expect(
+            [
+              '--context',
+              '-U10',
+              '-B1',
+              '-A2',
+              'testdata/existingJavaScriptSourceMap/jquery-1.10.1.min.js',
+              '4',
+              '745'
+            ],
+            'to yield output',
+            [
+              'testdata/existingJavaScriptSourceMap/jquery-1.10.1.js:109:16',
+              '\tdetach = function() {\n' +
+                '\t\tif ( document.addEventListener ) {\n' +
+                '                ^\n' +
+                '\t\t\tdocument.removeEventListener( "DOMContentLoaded", completed, false );\n' +
+                '\t\t\twindow.removeEventListener( "load", completed, false );'
+            ]
+          );
+        });
+      });
     });
   });
 
