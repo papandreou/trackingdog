@@ -46,6 +46,9 @@
     "unexpected": "^11.1.0",
     "unexpected-sinon": "^10.11.1"
   },
+  "files": [
+    "lib"
+  ],
   "nyc": {
     "include": [
       "lib/**"
