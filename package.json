@@ -42,7 +42,7 @@
     "httpception": "^3.0.0",
     "mocha": "^7.0.0",
     "prettier": "~1.19.1",
-    "sinon": "^8.0.1",
+    "sinon": "^9.0.0",
     "unexpected": "^11.1.0",
     "unexpected-sinon": "^10.11.1"
   },
