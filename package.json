@@ -4,10 +4,10 @@
   "description": "cli for finding the original source location of a line+column in a generated file, utilizing the source map",
   "main": "lib/TrackingDog.js",
   "scripts": {
-    "test": "mocha",
-    "coverage": "NODE_ENV=development nyc --reporter=lcov --reporter=text --all -- npm test && echo google-chrome coverage/lcov-report/index.html",
     "lint": "eslint . && prettier --check '**/*.js'",
-    "ci": "npm run test && npm run lint && npm run coverage"
+    "coverage": "NODE_ENV=development nyc --reporter=lcov --reporter=text --all -- npm test && echo google-chrome coverage/lcov-report/index.html",
+    "test": "mocha",
+    "test:ci": "npm run coverage"
   },
   "bin": {
     "trackingdog": "lib/cli.js"
