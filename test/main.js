@@ -4,16 +4,14 @@ const pathModule = require('path');
 const sinon = require('sinon');
 const processError = require('../lib/processError');
 
-const expect = require('unexpected')
-  .clone()
-  .use(require('unexpected-sinon'));
+const expect = require('unexpected').clone().use(require('unexpected-sinon'));
 
 const main = require('../lib/main');
 
-describe('main', function() {
+describe('main', function () {
   let mockConsole;
   let stdin;
-  beforeEach(async function() {
+  beforeEach(async function () {
     mockConsole = { log: sinon.spy() };
     stdin = undefined;
   });
@@ -34,7 +32,7 @@ describe('main', function() {
     }
   );
 
-  it('should output the mapped source location', async function() {
+  it('should output the mapped source location', async function () {
     await expect(
       ['testdata/existingJavaScriptSourceMap/jquery-1.10.1.min.js:4:19'],
       'to yield output',
@@ -42,7 +40,7 @@ describe('main', function() {
     );
   });
 
-  it('should guess the source map location by appending .map to the url', async function() {
+  it('should guess the source map location by appending .map to the url', async function () {
     await expect(
       ['testdata/unreferencedSourceMap/jquery-1.10.1.min.js:4:19'],
       'to yield output',
@@ -50,7 +48,7 @@ describe('main', function() {
     );
   });
 
-  it('should support passing the line and column numbers as separate arguments', async function() {
+  it('should support passing the line and column numbers as separate arguments', async function () {
     await expect(
       ['testdata/existingJavaScriptSourceMap/jquery-1.10.1.min.js', '4', '19'],
       'to yield output',
@@ -58,7 +56,7 @@ describe('main', function() {
     );
   });
 
-  it('should support passing line:column as a separate argument', async function() {
+  it('should support passing line:column as a separate argument', async function () {
     await expect(
       ['testdata/existingJavaScriptSourceMap/jquery-1.10.1.min.js', '4:19'],
       'to yield output',
@@ -66,14 +64,14 @@ describe('main', function() {
     );
   });
 
-  describe('with the --context switch', function() {
-    it('should output a code snippet with a bit of context', async function() {
+  describe('with the --context switch', function () {
+    it('should output a code snippet with a bit of context', async function () {
       await expect(
         [
           '--context',
           'testdata/existingJavaScriptSourceMap/jquery-1.10.1.min.js',
           '4',
-          '745'
+          '745',
         ],
         'to yield output',
         [
@@ -89,20 +87,20 @@ describe('main', function() {
             '\t\t\twindow.removeEventListener( "load", completed, false );\n' +
             '\n' +
             '\t\t} else {\n' +
-            '\t\t\tdocument.detachEvent( "onreadystatechange", completed );'
+            '\t\t\tdocument.detachEvent( "onreadystatechange", completed );',
         ]
       );
     });
 
-    describe('and -U', function() {
-      it('should render the specified number of context lines before and after', async function() {
+    describe('and -U', function () {
+      it('should render the specified number of context lines before and after', async function () {
         await expect(
           [
             '--context',
             '-U3',
             'testdata/existingJavaScriptSourceMap/jquery-1.10.1.min.js',
             '4',
-            '745'
+            '745',
           ],
           'to yield output',
           [
@@ -113,14 +111,14 @@ describe('main', function() {
               '\t\tif ( document.addEventListener ) {\n' +
               '                ^\n' +
               '\t\t\tdocument.removeEventListener( "DOMContentLoaded", completed, false );\n' +
-              '\t\t\twindow.removeEventListener( "load", completed, false );\n'
+              '\t\t\twindow.removeEventListener( "load", completed, false );\n',
           ]
         );
       });
     });
 
-    describe('and -B and -A', function() {
-      it('should render the specified number of context lines before and after', async function() {
+    describe('and -B and -A', function () {
+      it('should render the specified number of context lines before and after', async function () {
         await expect(
           [
             '--context',
@@ -128,7 +126,7 @@ describe('main', function() {
             '-A2',
             'testdata/existingJavaScriptSourceMap/jquery-1.10.1.min.js',
             '4',
-            '745'
+            '745',
           ],
           'to yield output',
           [
@@ -137,13 +135,13 @@ describe('main', function() {
               '\t\tif ( document.addEventListener ) {\n' +
               '                ^\n' +
               '\t\t\tdocument.removeEventListener( "DOMContentLoaded", completed, false );\n' +
-              '\t\t\twindow.removeEventListener( "load", completed, false );'
+              '\t\t\twindow.removeEventListener( "load", completed, false );',
           ]
         );
       });
 
-      describe('and -U', function() {
-        it('should prefer the -A and -B values and ignore -U', async function() {
+      describe('and -U', function () {
+        it('should prefer the -A and -B values and ignore -U', async function () {
           await expect(
             [
               '--context',
@@ -152,7 +150,7 @@ describe('main', function() {
               '-A2',
               'testdata/existingJavaScriptSourceMap/jquery-1.10.1.min.js',
               '4',
-              '745'
+              '745',
             ],
             'to yield output',
             [
@@ -161,7 +159,7 @@ describe('main', function() {
                 '\t\tif ( document.addEventListener ) {\n' +
                 '                ^\n' +
                 '\t\t\tdocument.removeEventListener( "DOMContentLoaded", completed, false );\n' +
-                '\t\t\twindow.removeEventListener( "load", completed, false );'
+                '\t\t\twindow.removeEventListener( "load", completed, false );',
             ]
           );
         });
@@ -200,7 +198,7 @@ describe('main', function() {
     return require('httpception')(
       {
         request: 'GET https://example.com/404.map',
-        response: 404
+        response: 404,
       },
       async () => {
         const err = await expect(
