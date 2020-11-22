@@ -81,11 +81,17 @@ const { url, line, column } = await dog.track({
   column: 19
 });
 
-console.log(`Yay, the location in the original source is ${url}:${line}:${column}`);
+console.log(
+  `Yay, the location in the original source is ${url}:${line}:${column}`
+);
 ```
 
 # Future ideas
 
-* Recursively attempt to load the source file and see if it also has a source
+- Recursively attempt to load the source file and see if it also has a source
   map reference (in case someone used a "dist" file in a bundle without using
   source-map-loader or equivalent)
+
+## Releases
+
+[Changelog](https://github.com/papandreou/trackingdog/blob/master/CHANGELOG.md)

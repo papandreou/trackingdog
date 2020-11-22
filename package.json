@@ -7,7 +7,8 @@
     "lint": "eslint . && prettier --check '**/*.js'",
     "coverage": "NODE_ENV=development nyc --reporter=lcov --reporter=text --all -- npm test && echo google-chrome coverage/lcov-report/index.html",
     "test": "mocha",
-    "test:ci": "npm run coverage"
+    "test:ci": "npm run coverage",
+    "preversion": "offline-github-changelog --next=${npm_package_version} > CHANGELOG.md && git add CHANGELOG.md"
   },
   "bin": {
     "trackingdog": "lib/cli.js"
@@ -41,6 +42,7 @@
     "eslint-plugin-standard": "^4.0.0",
     "httpception": "^4.0.1",
     "mocha": "^8.2.1",
+    "offline-github-changelog": "^2.0.0",
     "prettier": "~2.2.0",
     "sinon": "^9.0.0",
     "unexpected": "^12.0.0",
