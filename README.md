@@ -78,7 +78,7 @@ const dog = new TrackingDog();
 const { url, line, column } = await dog.track({
   url: 'https://code.jquery.com/jquery-1.10.1.min.js',
   line: 4,
-  column: 19
+  column: 19,
 });
 
 console.log(
