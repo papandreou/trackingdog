@@ -20,7 +20,7 @@
   "author": "Andreas Lind <andreaslindpetersen@gmail.com>",
   "license": "BSD-3-Clause",
   "dependencies": {
-    "@gustavnikolaj/async-main-wrap": "^3.0.0",
+    "@gustavnikolaj/async-main-wrap": "^4.0.0",
     "assetgraph": "^7.0.1",
     "error-stack-parser": "^2.0.1",
     "get-stdin": "^8.0.0",
