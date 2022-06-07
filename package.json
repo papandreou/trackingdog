@@ -22,7 +22,7 @@
   "dependencies": {
     "@gustavnikolaj/async-main-wrap": "^4.0.0",
     "assetgraph": "^7.0.1",
-    "error-stack-parser": "^2.0.1",
+    "error-stack-parser": "^3.0.0",
     "get-stdin": "^8.0.0",
     "magicpen": "^6.0.2",
     "magicpen-prism": "^5.0.0",
