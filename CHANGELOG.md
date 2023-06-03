@@ -1,3 +1,35 @@
+### v2.1.0 (2023-06-01)
+
+#### Pull requests
+
+- [#92](https://github.com/papandreou/trackingdog/pull/92) Upgrade eslint-plugin-mocha to version 10.0.1 ([depfu[bot]](mailto:23717796+depfu[bot]@users.noreply.github.com))
+- [#89](https://github.com/papandreou/trackingdog/pull/89) Upgrade prettier to version 2.5.0 ([depfu[bot]](mailto:23717796+depfu[bot]@users.noreply.github.com))
+- [#86](https://github.com/papandreou/trackingdog/pull/86) Upgrade sinon to version 12.0.1 ([depfu[bot]](mailto:23717796+depfu[bot]@users.noreply.github.com))
+- [#79](https://github.com/papandreou/trackingdog/pull/79) Upgrade prettier to version 2.4.1 ([depfu[bot]](mailto:23717796+depfu[bot]@users.noreply.github.com))
+- [#84](https://github.com/papandreou/trackingdog/pull/84) Upgrade eslint-plugin-promise to version 5.1.1 ([depfu[bot]](mailto:23717796+depfu[bot]@users.noreply.github.com))
+- [#81](https://github.com/papandreou/trackingdog/pull/81) Upgrade yargs to version 17.2.1 ([depfu[bot]](mailto:23717796+depfu[bot]@users.noreply.github.com))
+- [#75](https://github.com/papandreou/trackingdog/pull/75) Upgrade @gustavnikolaj\/async-main-wrap to version 4.0.0 ([depfu[bot]](mailto:23717796+depfu[bot]@users.noreply.github.com))
+- [#73](https://github.com/papandreou/trackingdog/pull/73) Upgrade sinon to version 11.1.1 ([depfu[bot]](mailto:23717796+depfu[bot]@users.noreply.github.com))
+- [#74](https://github.com/papandreou/trackingdog/pull/74) Upgrade eslint-plugin-mocha to version 9.0.0 ([depfu[bot]](mailto:23717796+depfu[bot]@users.noreply.github.com))
+- [#72](https://github.com/papandreou/trackingdog/pull/72) Upgrade assetgraph to version 7.0.1 ([depfu[bot]](mailto:23717796+depfu[bot]@users.noreply.github.com))
+- [#64](https://github.com/papandreou/trackingdog/pull/64) Upgrade sinon to version 10.0.0 ([depfu[bot]](mailto:23717796+depfu[bot]@users.noreply.github.com))
+- [#61](https://github.com/papandreou/trackingdog/pull/61) Upgrade magicpen-prism to version 5.0.0 ([depfu[bot]](mailto:23717796+depfu[bot]@users.noreply.github.com))
+- [#60](https://github.com/papandreou/trackingdog/pull/60) Upgrade eslint-config-prettier to version 7.0.0 ([depfu[bot]](mailto:23717796+depfu[bot]@users.noreply.github.com))
+- [#59](https://github.com/papandreou/trackingdog/pull/59) Upgrade eslint-plugin-standard to version 5.0.0 ([depfu[bot]](mailto:23717796+depfu[bot]@users.noreply.github.com))
+- [#57](https://github.com/papandreou/trackingdog/pull/57) Upgrade unexpected-sinon to version 11.0.0 ([depfu[bot]](mailto:23717796+depfu[bot]@users.noreply.github.com))
+- [#58](https://github.com/papandreou/trackingdog/pull/58) Upgrade prettier to version 2.2.0 ([depfu[bot]](mailto:23717796+depfu[bot]@users.noreply.github.com))
+- [#55](https://github.com/papandreou/trackingdog/pull/55) Upgrade eslint-config-standard to version 16.0.0 ([depfu[bot]](mailto:23717796+depfu[bot]@users.noreply.github.com))
+- [#54](https://github.com/papandreou/trackingdog/pull/54) Upgrade eslint-config-standard to version 15.0.0 ([depfu[bot]](mailto:23717796+depfu[bot]@users.noreply.github.com))
+
+#### Commits to master
+
+- [Use AssetGraph\#checkIncompatibleTypesForAsset instead of the checkIncompatibleTypes transform \(fixes slowness\)](https://github.com/papandreou/trackingdog/commit/b04c016b339352654d16359e1b132e1c5061ecd2) ([Andreas Lind](mailto:andreas.lind@workday.com))
+- [Update assetgraph to ^7.11.1](https://github.com/papandreou/trackingdog/commit/f56d7247629a46f7e5f9c58de62230d5d004f589) ([Andreas Lind](mailto:andreas.lind@workday.com))
+- [Fix CHANGELOG generation in preversion script now that an npm env var changed](https://github.com/papandreou/trackingdog/commit/66f42e38921423094406b4383b710f1715a1a14d) ([Andreas Lind](mailto:andreaslindpetersen@gmail.com))
+- [Adapt to the new api](https://github.com/papandreou/trackingdog/commit/e904a98119cda46bb53ba9fad7f07a663fc5bdfe) ([Andreas Lind](mailto:andreaslindpetersen@gmail.com))
+- [Update error-stack-parser to version 3.0.0](https://github.com/papandreou/trackingdog/commit/4ddaee6b43d42030379eb49abaf3900b45359014) ([depfu[bot]](mailto:23717796+depfu[bot]@users.noreply.github.com))
+- [+14 more](https://github.com/papandreou/trackingdog/compare/v2.0.0...v2.1.0)
+
 ### v2.0.0 (2020-09-11)
 
 #### Pull requests
